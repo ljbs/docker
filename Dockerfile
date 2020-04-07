@@ -9,48 +9,76 @@ RUN apk add --no-cache wget perl xz bash && \
     install-tl-20*/install-tl --profile=/tmp/texlive-profile.txt && \
     rm -rf install-tl-*
 
-ENV PATH=/usr/local/texlive/bin/x86_64-linux:$PATH
+ENV PATH=/usr/local/texlive/bin/x86_64-linuxmusl:$PATH
 
 RUN tlmgr update --self
 
 # base
 RUN tlmgr install \
   collection-latexrecommended \
-  latex \
+  latex \ 	
   latex-bin
+
+# ADS PhD template
+RUN tlmgr install \
+  oberdiek \
+  iftex \
+  xcolor \
+  kvoptions \
+  etoolbox \
+  showlabels \
+  datatool \
+  listings \
+  framed \
+  setspace \
+  hyperref \
+  geometry \
+  graphics \
+  crop \
+  textpos \
+  placeins \ 
+  psnfss \
+  microtype \
+  tools \
+  nomencl \
+  glossaries \
+  booktabs \
+  sectsty \
+  fancyhdr \
+  tocloft \
+  tracklang \
+  mfirstuc \
+  zref \
+  needspace
+  
+# fonts
+RUN tlmgr install \
+  cochineal \
+  newtx \
+  lato \
+  latex-fonts \
+  collection-fontsrecommended \
+  collection-fontsextra 
 
 # math and algo
 RUN tlmgr install \
   mathtools \
   amsmath \
-  amscls \
-  algorithms \
-  algorithmicx \
-  algorithm2e
+  amscls 
 
-# fonts and languages
+# languages
 RUN tlmgr install \
   babel-english \
-  latex-fonts \
-  collection-fontsrecommended \
-  collection-fontsextra \
-  lm
+  babel-dutch
 
 # graphical
 RUN tlmgr install \
-  graphics \
-  xcolor \
-  epstopdf \
-  geometry \
   pgf \
-  pgfplots
-
+  pgfplots \
+  mdframed
+  
 # other
 RUN tlmgr install \
-  tools \
   preprint \
   float \
-  hyperref \
-  caption \
-  relsize \
-  oberdiek
+  caption
