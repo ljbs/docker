@@ -49,7 +49,10 @@ RUN tlmgr install \
   tracklang \
   mfirstuc \
   zref \
-  needspace
+  needspace \
+  natbib \
+  subfiles \
+  ltxmisc 
   
 # fonts
 RUN tlmgr install \
