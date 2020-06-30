@@ -52,7 +52,8 @@ RUN tlmgr install \
   needspace \
   natbib \
   subfiles \
-  ltxmisc 
+  ltxmisc \
+  import 
   
 # fonts
 RUN tlmgr install \
