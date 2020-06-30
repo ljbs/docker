@@ -17,7 +17,8 @@ RUN tlmgr update --self
 RUN tlmgr install \
   collection-latexrecommended \
   latex \ 	
-  latex-bin
+  latex-bin \
+  ltxmisc \
 
 # ADS PhD template
 RUN tlmgr install \
@@ -52,8 +53,8 @@ RUN tlmgr install \
   needspace \
   natbib \
   subfiles \
-  ltxmisc \
-  import 
+  import \
+  harvard
   
 # fonts
 RUN tlmgr install \
