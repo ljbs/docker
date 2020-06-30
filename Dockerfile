@@ -18,7 +18,7 @@ RUN tlmgr install \
   collection-latexrecommended \
   latex \ 	
   latex-bin \
-  ltxmisc \
+  ltxmisc 
 
 # ADS PhD template
 RUN tlmgr install \
