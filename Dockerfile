@@ -54,7 +54,8 @@ RUN tlmgr install \
   natbib \
   subfiles \
   import \
-  harvard
+  harvard \
+  dpfloat
   
 # fonts
 RUN tlmgr install \
