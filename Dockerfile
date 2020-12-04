@@ -88,4 +88,5 @@ RUN tlmgr install \
 RUN tlmgr install \
   preprint \
   float \
-  caption
+  caption \
+  etoolbox
