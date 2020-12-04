@@ -55,7 +55,8 @@ RUN tlmgr install \
   subfiles \
   import \
   harvard \
-  dpfloat
+  dpfloat \
+  xstring
   
 # fonts
 RUN tlmgr install \
