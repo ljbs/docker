@@ -82,7 +82,8 @@ RUN tlmgr install \
 RUN tlmgr install \
   pgf \
   pgfplots \
-  mdframed
+  mdframed \
+  draftfigure
   
 # other
 RUN tlmgr install \
