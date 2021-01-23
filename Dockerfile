@@ -90,4 +90,5 @@ RUN tlmgr install \
   preprint \
   float \
   caption \
-  etoolbox
+  etoolbox \
+  enumitem
